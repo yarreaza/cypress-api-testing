@@ -1,0 +1,32 @@
+{
+  "name": "cypress-api-testing",
+  "version": "1.0.0",
+  "description": "Pruebas de API",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypres open",
+    "cypress:run": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yarreaza/cypress-api-testing.git"
+  },
+  "keywords": [
+    "testing",
+    "api",
+    "qa",
+    "test"
+  ],
+  "author": "Yelitza Arreaza",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yarreaza/cypress-api-testing/issues"
+  },
+  "homepage": "https://github.com/yarreaza/cypress-api-testing#readme",
+  "devDependencies": {
+    "cypress": "^13.6.4"
+  },
+  "dependencies": {
+    "cypress-plugin-api": "^2.11.1"
+  }
+}
