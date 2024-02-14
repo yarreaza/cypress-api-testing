@@ -21,4 +21,5 @@ jobs:
       run: |
         npx cypress run --spec "cypress/e2e/3-testing-api/api_tests_examples.cy.js"
         
-      
+    - name: cypress-report
+      uses: duynhanf/cypress-report@v2 
