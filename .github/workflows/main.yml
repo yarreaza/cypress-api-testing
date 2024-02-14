@@ -12,14 +12,13 @@ jobs:
     steps:
     - name: Checkout código fuente
       uses: actions/checkout@v2
+    - name: Cypress.io
+      uses: cypress-io/github-action@v6.5.0
 
-    - name: Instalar dependencias
-      run: |
-        npm ci
-
-    - name: Ejecutar pruebas Cypress
-      run: |
-        npx cypress run --spec "cypress/e2e/3-testing-api/api_tests_examples.cy.js"
-        
     - name: cypress-report
       uses: duynhanf/cypress-report@v2 
+      
+      with: 
+        run: npx cypress run --spec "cypress/e2e/3-testing-api/api_tests_examples.cy.js"
+        
+   
