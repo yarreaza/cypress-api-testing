@@ -8,13 +8,17 @@ jobs:
         uses: actions/checkout@v4
       # Install npm dependencies, cache them correctly
       # and run all Cypress tests
+      
+      - name: Install Dependencies
+        run: npm install
+        
       - name: Cypress run
-        uses: cypress-io/github-action@v6
+        uses: cypress-io/github-action@v6        
 
       - name: cypress-report
-        uses: duynhanf/cypress-report@v2 
+        uses: duynhanf/cypress-report@v2         
         
         with: 
-          run: npx cypress run "cypress/e2e/3-testing-api/api_tests_examples.cy.js"
+          run: npx cypress run "cypress/e2e/1-testing-api/api_tests_examples.cy.js"
         
    
