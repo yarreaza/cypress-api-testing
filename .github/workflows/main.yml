@@ -1,5 +1,5 @@
 
-name: Cypress Tests
+name: Running API tests in Cypress
 on: [push]
 jobs:
   cypress-run:
