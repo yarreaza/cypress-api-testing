@@ -1,24 +1,20 @@
-name: Ejecutar pruebas Cypress
-
-on:
-  push:
-    branches:
-      - main
-
+name: End-to-end tests
+on: push
 jobs:
-  cypress:
-    runs-on: ubuntu-latest
-
+  cypress-run:
+    runs-on: ubuntu-lastest
     steps:
-    - name: Checkout código fuente
-      uses: actions/checkout@v2
-    - name: Cypress.io
-      uses: cypress-io/github-action@v6.5.0
+      - name: Checkout
+        uses: actions/checkout@v4
+      # Install npm dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
 
-    - name: cypress-report
-      uses: duynhanf/cypress-report@v2 
-      
-      with: 
-        run: npx cypress run --spec "cypress/e2e/3-testing-api/api_tests_examples.cy.js"
+      - name: cypress-report
+        uses: duynhanf/cypress-report@v2 
+        
+        with: 
+          run: npx cypress run --spec "cypress/e2e/3-testing-api/api_tests_examples.cy.js"
         
    
