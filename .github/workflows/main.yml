@@ -19,6 +19,6 @@ jobs:
         uses: duynhanf/cypress-report@v2         
         
         with: 
-          run: npx cypress run "cypress/e2e/1-testing-api/api_tests_examples.cy.js"
+          run: npx cypress run 
         
    
