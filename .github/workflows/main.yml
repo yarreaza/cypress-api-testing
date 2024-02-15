@@ -18,6 +18,6 @@ jobs:
         uses: duynhanf/cypress-report@v2 
         
         with: 
-         run: npx cypress run
+         run: npm cypress run
 
  
